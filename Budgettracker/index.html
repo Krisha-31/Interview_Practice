@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker System</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Budget Tracker System</h1>
+  </div>
+
+  <main class="tracker-container">
+    <section class="controls">
+      <div class="form-card">
+        <h2>Add Budget</h2>
+        <label for="budgetInput">Budget:</label>
+        <input id="budgetInput" type="number" min="0" step="0.01" placeholder="Enter budget">
+        <button id="addBudgetButton" type="button">Add Budget</button>
+      </div>
+
+      <div class="form-card">
+        <h2>Add Expense</h2>
+        <label for="expenseNameInput">Expense Title:</label>
+        <input id="expenseNameInput" type="text" placeholder="Enter expense title">
+        <label for="expenseAmountInput">Amount:</label>
+        <input id="expenseAmountInput" type="number" min="0" step="0.01" placeholder="Enter amount">
+        <button id="addExpenseButton" type="button">Add Expense</button>
+      </div>
+
+      <button class="reset-button" id="resetButton" type="button">Reset All</button>
+    </section>
+
+    <section class="detail-panel">
+      <div class="summary-grid">
+        <div class="s-box">
+          <span>Total Budget:</span>
+          <strong id="totalBudget">10000.00</strong>
+        </div>
+
+        <div class="s-box">
+          <span>Total Expenses:</span>
+          <strong id="totalExpenses">7500.00</strong>
+        </div>
+        
+        <div class="s-box">
+          <span>Budget Left:</span>
+          <strong id="budgetLeft">2500.00</strong>
+        </div>
+      </div>
+
+      <h2 class="ht">Expense History:</h2>
+      <div class="t-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Expense Name</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="expenseTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

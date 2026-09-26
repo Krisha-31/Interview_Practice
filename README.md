@@ -1,141 +1,208 @@
-# 💰 Budget Tracker System
+🌤️ Weather App
 
-A simple and user-friendly **Budget Tracker System** built using **HTML, CSS, and JavaScript**.
-This project helps users add a budget, record expenses, view total expenses, and check the remaining budget.
+A beautiful and responsive Weather App built using HTML, CSS, and JavaScript.
+The application uses the Open-Meteo API to display current weather information and a 7-day weather forecast for any city.
 
-## 🚀 Features
+✨ Features
 
-* ➕ Add a budget
-* 💸 Add expenses with expense name and amount
-* 📊 Display total budget
-* 🧾 Display total expenses
-* 💰 Calculate remaining budget automatically
-* 🗑️ Remove individual expenses
-* 🔄 Reset all budget and expense data
-* 📱 Responsive design for smaller screens
-* 🎨 Clean and simple user interface
+- 🔍 Search weather by city name
+- 🌡️ Display current temperature
+- 💧 Display humidity
+- 🌤️ Display weather condition
+- 🌡️ Display "Feels Like" temperature
+- 💨 Display wind speed
+- 📅 7-day weather forecast
+- 🌙 Dark Mode / ☀️ Light Mode
+- ⌨️ Search using the Enter key
+- 📱 Fully responsive design
+- 🎨 Clean and modern user interface
+- 🌍 Supports cities from different countries
 
-## 🛠️ Technologies Used
+🛠️ Technologies Used
 
-* **HTML5** – For creating the structure of the website
-* **CSS3** – For styling and responsive design
-* **JavaScript** – For budget and expense calculations and user interactions
+- HTML5 – Website structure
+- CSS3 – Styling, responsive design and dark mode
+- JavaScript – API integration and dynamic content
+- Open-Meteo API – Weather and geocoding data
 
-## 📂 Project Structure
+📂 Project Structure
 
-```text
-Budget-Tracker-System/
+Weather-App/
 │
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
-```
 
-## ⚙️ How It Works
+🚀 How to Run
 
-### 1. Add Budget
+1. Download or Clone the Repository
 
-Enter an amount in the **Budget** input field and click **Add Budget**.
+git clone YOUR_GITHUB_REPOSITORY_LINK
 
-The entered amount is added to the total budget.
+2. Open the Project
 
-### 2. Add Expense
+Open the project folder in VS Code.
 
-Enter:
+3. Run the Website
 
-* Expense Title
-* Expense Amount
+Open "index.html" in your browser.
 
-Then click **Add Expense**.
+You can also use the Live Server extension in VS Code.
 
-The expense will appear in the **Expense History** table.
+🌐 API Used
 
-### 3. Budget Summary
+This project uses the Open-Meteo API, which provides weather and geocoding information.
 
-The system automatically displays:
+Geocoding API
 
-* **Total Budget**
-* **Total Expenses**
-* **Budget Left**
+Used to find the latitude and longitude of a city:
 
-The remaining budget is calculated using:
+https://geocoding-api.open-meteo.com/v1/search
 
-```text
-Budget Left = Total Budget - Total Expenses
-```
+Weather API
 
-### 4. Remove Expense
+Used to get current weather and a 7-day forecast:
 
-Each expense has a **Remove** button.
-Clicking it removes that expense and updates the total expenses and remaining budget.
+https://api.open-meteo.com/v1/forecast
 
-### 5. Reset All
+No API key is required for this project.
 
-Click **Reset All** to clear the budget and all added expenses.
+📊 Weather Information
 
-## 🖥️ How to Run the Project
+The application displays:
 
-1. Download or clone this repository.
-2. Open the project folder in **VS Code**.
-3. Make sure these files are present:
+Information| Description
+🌡️ Temperature| Current temperature
+💧 Humidity| Current relative humidity
+🌡️ Feels Like| Apparent temperature
+💨 Wind| Current wind speed
+🌤️ Weather| Current weather condition
+📅 Forecast| 7-day weather forecast
 
-   * `index.html`
-   * `style.css`
-   * `script.js`
-4. Open `index.html` in your browser.
+🌦️ Weather Conditions
 
-You can also use the **Live Server** extension in VS Code to run the project.
+The application converts Open-Meteo weather codes into easy-to-understand weather conditions.
 
-## 📸 Project Preview
+Examples:
 
-The application contains:
+- ☀️ Clear Sky
+- 🌤️ Partly Cloudy
+- ☁️ Cloudy
+- 🌫️ Foggy
+- 🌧️ Rain
+- ❄️ Snow
+- 🌦️ Rain Showers
+- ⛈️ Thunderstorm
 
-* Budget input section
-* Expense input section
-* Budget summary
-* Expense history table
-* Remove expense functionality
-* Reset functionality
+🌙 Dark Mode
 
-## 🎯 Project Purpose
+The application includes a Dark Mode feature.
 
-The purpose of this project is to practice **HTML, CSS, and JavaScript** concepts by creating a practical budget management application.
+Clicking the Dark Mode button changes the website to a dark theme.
 
-It demonstrates concepts such as:
+Click the button again to return to Light Mode.
 
-* DOM manipulation
-* Variables
-* Arrays
-* Objects
-* Functions
-* Loops
-* Event handling
-* Template literals
-* Number calculations
-* Dynamic HTML generation
+📱 Responsive Design
 
-## 🔮 Future Improvements
+The Weather App is designed to work on:
 
-Some features that can be added in the future:
+- 💻 Desktop
+- 💻 Laptop
+- 📱 Mobile
+- 📱 Tablet
 
-* 💾 Save data using Local Storage
-* 📅 Add expense dates
-* 📈 Add expense charts
-* 🏷️ Add expense categories
-* 🔍 Search and filter expenses
-* 📊 Monthly expense reports
-* 📱 Improve mobile UI
+CSS media queries automatically adjust the layout for smaller screen sizes.
 
-## 👩‍💻 Author
+🔎 How It Works
 
-**Krisha Sangani**
+Step 1 — Enter City
+
+The user enters a city name in the search box.
+
+Step 2 — Find Location
+
+JavaScript sends the city name to the Open-Meteo Geocoding API.
+
+The API returns:
+
+- City name
+- Country
+- Latitude
+- Longitude
+
+Step 3 — Get Weather
+
+The latitude and longitude are then used to request weather data from the Open-Meteo Forecast API.
+
+Step 4 — Display Weather
+
+JavaScript dynamically updates the webpage with:
+
+- Current temperature
+- Humidity
+- Feels-like temperature
+- Wind speed
+- Weather condition
+
+Step 5 — Display Forecast
+
+The daily weather information is converted into seven forecast cards using JavaScript.
+
+💡 JavaScript Concepts Used
+
+This project helped practice:
+
+- Variables
+- Functions
+- "if...else"
+- Arrays and objects
+- DOM manipulation
+- "addEventListener()"
+- "fetch()"
+- "async/await"
+- Template literals
+- "for" loops
+- "try...catch"
+- API integration
+- JSON data
+- Dynamic HTML generation
+- CSS class manipulation
+
+🎯 Project Purpose
+
+This project was created to practice frontend web development and understand how real-time API data can be fetched and displayed dynamically on a website.
+
+It combines HTML, CSS and JavaScript to create an interactive weather application.
+
+🔮 Future Improvements
+
+Possible future features:
+
+- 📍 Current location weather
+- 🕐 Hourly forecast
+- 🌡️ Celsius/Fahrenheit switch
+- 🌅 Sunrise and sunset information
+- 💾 Save favorite cities
+- 🌈 Weather-based background
+- 📊 Weather charts
+- 🔔 Weather alerts
+- 🌓 Save Dark Mode preference
+
+👩‍💻 Author
+
+Krisha Sangani
 
 Computer Engineering Student | Full Stack Development Learner
 
-### Skills Used
+Skills Used
 
-`HTML` `CSS` `JavaScript`
+"HTML" "CSS" "JavaScript" "API" "Responsive Design"
 
 ---
 
+⭐ If you like this project, consider giving the repository a Star!
+
+📄 License
+
+This project is created for educational and learning purposes.
